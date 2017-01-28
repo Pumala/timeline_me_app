@@ -14,12 +14,12 @@ db = pg.DB(
 
 tmp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
-app = Flask('e_commerce_pro', static_url_path='', template_folder=tmp_dir,
+app = Flask('timeline_me_app', static_url_path='', template_folder=tmp_dir,
     static_folder=static_folder)
 
 app.run('/')
 def home():
-    return app.send_static_file('index.html')    
+    return app.send_static_file('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
